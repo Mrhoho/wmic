@@ -1,6 +1,6 @@
 {
-  "name": "wmic",
-  "version": "0.4.0",
+  "name": "wmic-custom",
+  "version": "0.4.2",
   "description": "Wrapper around the WMIC Windows command interface.",
   "main": "index.js",
   "scripts": {
@@ -14,13 +14,13 @@
     "wrapper"
   ],
   "dependencies": {
-    "async": "",
-    "iconv-lite": "^0.5.0"
+    "async": "1.5.2",
+    "iconv-lite": "^0.6.0"
   },
-  "author": "Tomás Pollak <tomas@forkhq.com>",
+  "author": "mrhoho <370280138@qq.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomas/wmic.git"
+    "url": "https://github.com/Mrhoho/wmic.git"
   },
   "license": "MIT",
   "devDependencies": {

@@ -149,10 +149,18 @@ var consoleEncoding;
 
 var queue = async.queue(function(cmd, cb) {
 
-  var opts = { env: process.env, cwd: process.env.TEMP };
+
+  var env = window.electronEnv || process.env
+
+  for(var i in env) {
+    env[i.toUpperCase()] = env[i]
+  }
+
+  var opts = { env: env, cwd: env.TEMP };
+
   if (opts.env.PATH.indexOf('system32') === -1) {
-    opts.env.PATH += ';' + process.env.WINDIR + "\\system32";
-    opts.env.PATH += ';' + process.env.WINDIR + "\\system32\\wbem";
+    opts.env.PATH += ';' + env.WINDIR + "\\system32";
+    opts.env.PATH += ';' + env.WINDIR + "\\system32\\wbem";
   }
 
   var pid;
